@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../utils/apiurl.js';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
 
   const navigate = useNavigate();
 
@@ -23,10 +23,11 @@ const Login = () => {
       if (response.data) {
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('id', response.data.id);
+        localStorage.setItem('username', response.data.username);
         navigate('/dashboard');
       }
     } catch (error) {
-      setMessage(error.response.data.message);
+      toast.error(error.response.data.message);
     }
   };
 
@@ -45,9 +46,6 @@ const Login = () => {
         </div>
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          {/* error handling  */}
-          <div className=" mb-2 mx-24 text-red-600">{message}</div>
-
           <form class="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label

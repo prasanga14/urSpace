@@ -1,19 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import DashboardNavbar from '../components/DashboardNavbar';
-import Home from './Home';
+import Navbar from '../components/Navbar';
 
 const Dashboard = () => {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    localStorage.clear();
-    navigate('/login');
-  };
-
   return (
     <>
-      <DashboardNavbar />
+      <Navbar />
     </>
   );
 };

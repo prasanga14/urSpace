@@ -20,7 +20,7 @@ const getSingle = async (req, res) => {
     res.status(200).send({ requiredUser });
   } catch (error) {
     console.log(error.message);
-    res.status(500).send({ message: error.message });
+    res.status(500).send({ message: error.message, json: 'empty' });
   }
 };
 

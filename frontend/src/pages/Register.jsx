@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../utils/apiurl.js';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -28,7 +29,7 @@ const Register = () => {
       console.log(response);
 
       if (response.status === 200) {
-        alert('Account creation sucessful');
+        toast.success('Account creation sucessful');
         navigator('/login');
       }
     } catch (error) {
