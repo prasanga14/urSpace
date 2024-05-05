@@ -9,6 +9,8 @@ router.get('/:id', user.getSingle);
 
 router.post('/register', user.createUser);
 
+router.post('/send-friend-request', user.sendFriendRequest);
+
 router.delete('/delete/:id', user.deleteUser);
 
 router.post('/login', user.loginUser);

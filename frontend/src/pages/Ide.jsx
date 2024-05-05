@@ -42,14 +42,14 @@ const Ide = () => {
       return (
         <>
           <Navbar />
-          <div className="rounded-lg text-primary w-1/2 h-96 flex flex-col justify-center mx-auto border items-center mt-20">
+          <div className="rounded-2xl text-primary w-1/2 h-96 flex flex-col justify-center mx-auto border-8  items-center mt-20">
             <h1 className="font-bold text-3xl">Join room from here</h1>
             <input
               type="text"
               placeholder="Enter room ID"
               value={roomId}
               onChange={(e) => setRoomId(e.target.value)}
-              className="m-3 text-black w-96 border p-3 rounded-e"
+              className="m-3 text-black w-96 border-3 border-black p-3 rounded-e"
               onKeyUp={handleInputEnter}
             />
             <input
@@ -57,7 +57,7 @@ const Ide = () => {
               placeholder="Enter your Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="m-2 text-black w-96 border p-3 rounded-e"
+              className="m-2 text-black w-96 border-3 border-black p-3 rounded-e"
               onKeyUp={handleInputEnter}
             />
             <button

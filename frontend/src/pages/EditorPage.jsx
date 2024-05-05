@@ -99,7 +99,7 @@ const EditorPage = () => {
           urSpace
         </h1>
         <hr />
-        <h3 className=" text-white font-bold my-5 text-center">Connected</h3>
+        <h3 className=" text-green font-bold my-5 text-center">Connected</h3>
         <div className="clientLists flex items-center flex-wrap gap-5">
           {clients.map((client) => (
             <Client username={client.username} key={client.socketId} />
@@ -116,7 +116,7 @@ const EditorPage = () => {
         </button>
         <button
           onClick={handleLeave}
-          className="bg-red-700 hover:bg-slate-400 text-black my-1 rounded font-bold"
+          className="bg-green hover:text-primary text-black my-1 rounded font-bold"
         >
           Leave Meeting
         </button>

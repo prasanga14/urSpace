@@ -57,7 +57,7 @@ const createUser = async (req, res) => {
 };
 
 const updateUser = async (req, res) => {
-  res.send('All');
+  res.send('update user response');
 };
 
 const deleteUser = async (req, res) => {
@@ -111,6 +111,13 @@ const loginUser = async (req, res) => {
   }
 };
 
+const sendFriendRequest = async (req, res) => {
+  try {
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 export {
   getAllUsers,
   getSingle,
@@ -118,4 +125,5 @@ export {
   updateUser,
   deleteUser,
   loginUser,
+  sendFriendRequest,
 };

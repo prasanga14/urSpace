@@ -6,6 +6,8 @@ import ProtectedRoutes from './utils/ProtectedRoutes';
 import Home from './pages/Home';
 import Ide from './pages/Ide';
 import EditorPage from './pages/EditorPage';
+import JitsiMeetComponent from './pages/JitsiMeetComponent';
+import Github from './pages/Github';
 
 function App() {
   return (
@@ -13,9 +15,12 @@ function App() {
       <div className="App h-lvh">
         <Routes>
           <Route element={<Home />} path="/" />
+          <Route element={<Dashboard />} path="/dashboard" />
+          <Route element={<JitsiMeetComponent />} path="/meeting-room" />
+          <Route element={<Github />} path="/github" />
+          <Route element={<Ide />} path="/ide" />
           <Route element={<Login />} path="/login" />
           <Route element={<Register />} path="/register" />
-          <Route element={<Ide />} path="/ide" />
           <Route element={<EditorPage />} path="/editor/:roomId" />
 
           <Route element={<ProtectedRoutes />}>

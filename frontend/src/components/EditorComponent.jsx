@@ -60,7 +60,7 @@ const EditorComponent = ({ socketRef, roomId, onCodeChange }) => {
         {
           mode: { name: 'javascript', json: true },
           theme: 'dracula',
-          autoCloseTags: true,
+          autoCloseTag: true,
           autoCloseBrackets: true,
           lineNumbers: true,
         }
